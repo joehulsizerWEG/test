@@ -1,0 +1,35 @@
+/* -------------------------------------------------------------
+   Global colour tokens (one source of truth)
+----------------------------------------------------------------*/
+:root {
+    --we-primary : #043240;  /* Deep Blue */
+    --we-dark-1  : #0a202e;
+    --we-dark-2  : #53575d;
+    --we-gray-1  : #979798;
+    --we-gray-2  : #b3bdc6;
+    --we-accent  : #436185;
+    --we-light   : #e5d4d0;
+
+    /* Map Bootstrap 5 theme variables */
+    --bs-primary: var(--we-primary);
+    --bs-dark  : var(--we-dark-1);
+    --bs-secondary: var(--we-dark-2);
+}
+
+/* -------------------------------------------------------------
+   Layout
+----------------------------------------------------------------*/
+body           { background:#f8f9fa; }
+.sidebar        { width:230px; position:fixed; height:100%;
+                  padding:1rem; background:var(--we-dark-1);
+                  color:#fff; }
+.sidebar a      { color:#fff; }
+.sidebar a.active, .sidebar a:hover {
+                  background:var(--we-primary) !important; }
+.page-content   { margin-left:240px; padding:2rem 1.5rem; }
+
+/* Optional: override Plotly fonts so text is legible on
+   deep‑blue background in hover‑labels, etc. */
+:root {
+    --plotly-font-color: #043240;
+}
